@@ -1,4 +1,4 @@
-import init, { AsyncGameEngine } from '/pkg/ao_rust_web.js';
+import init, { AsyncGameEngine } from '/ao-wasm-site/pkg/ao_rust_web.js';
 await init();
 // await run();
 // await gl_main();
