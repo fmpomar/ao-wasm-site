@@ -654,8 +654,8 @@ async function init(input) {
         var ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper1861 = function(arg0, arg1, arg2) {
-        var ret = makeMutClosure(arg0, arg1, 72, __wbg_adapter_20);
+    imports.wbg.__wbindgen_closure_wrapper1863 = function(arg0, arg1, arg2) {
+        var ret = makeMutClosure(arg0, arg1, 73, __wbg_adapter_20);
         return addHeapObject(ret);
     };
 
