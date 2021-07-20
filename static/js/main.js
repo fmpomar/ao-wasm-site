@@ -4,6 +4,8 @@ await init();
 // await gl_main();
 
 let canvas = document.getElementById("canvas");
+
+
 let gameEngine = await AsyncGameEngine.new("/ao-wasm-site/static/asset/", canvas);
 let cameraSpeed = {x: 0.0, y: 0.0};
 let mapIndex = 1;
@@ -17,6 +19,7 @@ function step(timestamp) {
     }
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    gameEngine.set_viewport_size(canvas.width, canvas.height);
     gameEngine.step((timestamp - last) / 1000.0);
     last = timestamp;
     window.requestAnimationFrame(step);
@@ -45,7 +48,6 @@ document.addEventListener('keypress', async function (e) {
     if (mapIndex < 1) mapIndex = 1;
     console.log("Loading map ", mapIndex);
     await gameEngine.set_map(mapIndex);
-    // map = (await gameEngine.fetch_map('' mapIndex));
 })
 
 document.addEventListener('keydown', function (e) {
